@@ -76,7 +76,7 @@ class weatherDisplay(Thread):
         self.sleep_cond.notify()
 
     def _initDisplay(self, dispPins):
-        self.disp = LCD.Adafruit_CharLCD(dispPins.rs, dispPins.en, dispPins.d4, dispPins.d5, dispPins.d6, dispPins.d7, 16, 2)
+        self.disp = LCD.Adafruit_CharLCD(dispPins['rs'], dispPins['en'], dispPins['d4'], dispPins['d5'], dispPins['d6'], dispPins['d7'], 16, 2)
 
     def _fetchWeather(self):
         geo = geocoder.ip('me')

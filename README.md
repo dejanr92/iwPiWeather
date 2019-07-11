@@ -4,6 +4,11 @@ You can either get the source code and include it in your application manlually,
 
 ```pip install iwPiWeather```
 
+Or depending on your raspberry config for python3 you might need to run
+
+```pip3 install iwPiWeather```
+
+
 ## Use example
 
 Include your package, define the pins and initialize the thread
@@ -11,7 +16,7 @@ Include your package, define the pins and initialize the thread
 ```
 import iwPiWeather
 displayPinout = { "rs": 22, "en": 17, "d7": 18, "d6": 23, "d5": 24, "d4": 25 }
-weather = prodWeather.weatherDisplay(apiKey='passyouroowmapikey', poolRate=120, dispPins=displayPinout, autoStart=True)
+weather = iwPiWeather.weatherDisplay(apiKey='passyouroowmapikey', poolRate=120, dispPins=displayPinout, autoStart=True)
 ```
 
 You can pass the following arguments in the constructor:

@@ -1,6 +1,6 @@
 from distutils.core import setup
 
-requires = ['geocoder', 'pyowm', 'Adafruit_CharLCD']
+requires = ['geocoder', 'pyowm', 'Adafruit_CharLCD', 'RPi.GPIO']
 setup(
   name = 'iwPiWeather',
   packages = ['iwPiWeather'],
@@ -10,12 +10,13 @@ setup(
   author = 'Dejan Roshkovski',
   author_email = 'dejan.roshkovski@interworks.com.mk',
   url = 'https://github.com/dejanr92/iwPyWeather',
-  download_url = 'https://github.com/dejanr92/iwPyWeather/archive/v_01.tar.gz',
+  download_url = 'https://github.com/dejanr92/iwPiWeather/archive/master.zip',
   keywords = ['RaspberryPi', 'LCD display', '16x2', 'Pi'],   # Keywords that define your package best
   install_requires=[
           'geocoder',
           'pyowm',
-          'Adafruit_CharLCD'
+          'Adafruit_CharLCD',
+          'RPi.GPIO'
       ],
   package_dir={'iwPiWeather': 'iwPiWeather'},
   classifiers=[
