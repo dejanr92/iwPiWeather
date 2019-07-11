@@ -1,14 +1,19 @@
 from distutils.core import setup
 
 requires = ['geocoder', 'pyowm', 'Adafruit_CharLCD', 'RPi.GPIO']
+
+from os import path
+with open('README.md') as f:
+    long_description = f.read()
 setup(
   name = 'iwPiWeather',
   packages = ['iwPiWeather'],
-  version = '0.1',
+  version = '0.1.0',
   license = 'gpl-3.0',
   description = 'Gets your weather data for a 16x2 display on raspberry pi',
+  long_description=long_description,
+  long_description_content_type='text/markdown',
   author = 'Dejan Roshkovski',
-  author_email = 'dejan.roshkovski@interworks.com.mk',
   url = 'https://github.com/dejanr92/iwPyWeather',
   download_url = 'https://github.com/dejanr92/iwPiWeather/archive/master.zip',
   keywords = ['RaspberryPi', 'LCD display', '16x2', 'Pi'],   # Keywords that define your package best
